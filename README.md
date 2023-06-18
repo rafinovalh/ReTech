@@ -74,7 +74,7 @@ Table transaction adalah table yang berguna untuk menyimpan data ```transactions
 ```UML:```
 ![alt text!](https://github.com/rafinovalh/ReTech/blob/main/Assets/UML_ReTech.png)
 
-```UML:```
+```ERD:```
 
 ![alt text!](https://github.com/rafinovalh/ReTech/blob/main/Assets/ERD_ReTech.png)
 
