@@ -70,6 +70,9 @@ Table transaction adalah table yang berguna untuk menyimpan data ```transactions
 5. price_deal
 ```
 ---
+## Postman Documentation Collection
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://documenter.getpostman.com/view/24275980/2s93si2Aij)
+---
 # Relation Table dan UML
 ```UML:```
 ![alt text!](https://github.com/rafinovalh/ReTech/blob/main/Assets/UML_ReTech.png)
