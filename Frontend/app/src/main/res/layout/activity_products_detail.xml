@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blue_bg"
+    tools:context=".ProductsDetailActivity">
+
+
+    <FrameLayout
+        android:layout_marginTop="70dp"
+        android:layout_width="390dp"
+        android:layout_height="600dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="20.7dp">
+
+
+            <TextView
+                android:id="@+id/productdetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="57.7dp"
+                android:layout_marginLeft="125dp"
+                android:text="Detail"
+                android:textColor="#030303"
+                android:textSize="33.3sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Product Name"
+                android:textColor="#c2c2c2"
+                android:textSize="13.3sp" />
+
+            <TextView
+                android:id="@+id/productname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product Name"
+                android:textColor="#000000"
+                android:textSize="15.3sp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginTop="6.3dp"
+                android:layout_marginRight="44.3dp"
+                android:background="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Description"
+                android:textColor="#c2c2c2"
+                android:textSize="13.3sp" />
+
+            <TextView
+                android:id="@+id/productdesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Desctription"
+                android:textColor="#000000"
+                android:textSize="15.3sp" />
+
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginTop="6.3dp"
+                android:layout_marginRight="44.3dp"
+                android:background="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Price"
+                android:textColor="#c2c2c2"
+                android:textSize="13.3sp" />
+
+            <TextView
+                android:id="@+id/productprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price"
+                android:textColor="#000000"
+                android:textSize="15.3sp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginTop="6.3dp"
+                android:layout_marginRight="44.3dp"
+                android:background="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Negotiabel"
+                android:textColor="#c2c2c2"
+                android:textSize="13.3sp" />
+
+            <TextView
+                android:id="@+id/productnegotiable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Negotiable"
+                android:textColor="#000000"
+                android:textSize="15.3sp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginTop="6.3dp"
+                android:layout_marginRight="44.3dp"
+                android:background="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Status"
+                android:textColor="#c2c2c2"
+                android:textSize="13.3sp" />
+
+            <TextView
+                android:id="@+id/productstatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                android:textColor="#000000"
+                android:textSize="15.3sp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginTop="6.3dp"
+                android:layout_marginRight="44.3dp"
+                android:background="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Seller Name"
+                android:textColor="#c2c2c2"
+                android:textSize="13.3sp" />
+
+            <TextView
+                android:id="@+id/productseller"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seller name"
+                android:textColor="#000000"
+                android:textSize="15.3sp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginTop="6.3dp"
+                android:layout_marginRight="44.3dp"
+                android:background="@color/white" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="620dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/bidbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bid Product"
+            android:visibility="invisible">
+
+        </Button>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="620dp"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/yourbid"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:text="Your Bid"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="15.3sp"
+            android:visibility="invisible"/>
+
+        <Button
+            android:id="@+id/addbidbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bid"
+            android:visibility="invisible">
+
+        </Button>
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
