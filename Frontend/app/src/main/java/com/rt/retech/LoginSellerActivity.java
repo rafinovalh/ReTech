@@ -60,32 +60,32 @@ public class LoginSellerActivity extends AppCompatActivity {
 
     }
 
-    protected void requestLoginSeller(){
+    private void requestLoginSeller(){
         mApiService.loginRequestSeller(username.getText().toString(), password.getText().toString()).enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 if(response.isSuccessful()){
                     try{
                         JSONObject theJson = new JSONObject(response.body().string());
-                        if(theJson.getString("Message").equals("Success")){
+                        if(theJson.getString("Message").equals("Login successful")){
                             //masih ga tau pas dan bener apa ga
                             Intent move = new Intent(LoginSellerActivity.this, MainSellerActivity.class);
                             startActivity(move);
                             Toast.makeText(mContext, "Login Successfull", Toast.LENGTH_SHORT).show();
                         }else{
-                            Toast.makeText(mContext, "Login Failed", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(mContext, "Login Failed1", Toast.LENGTH_SHORT).show();
                         }
                     }catch(JSONException | IOException e){
                         e.printStackTrace();
                     }
                 }else{
-                    Toast.makeText(mContext, "Login Failed", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(mContext, "Login Failed2", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
-                Toast.makeText(mContext, "Login Failed", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "Login Failed3", Toast.LENGTH_SHORT).show();
             }
         });
     }

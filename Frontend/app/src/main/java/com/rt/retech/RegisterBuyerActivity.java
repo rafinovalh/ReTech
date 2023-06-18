@@ -48,16 +48,10 @@ public class RegisterBuyerActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 requestRegisterBuyer();
+
             }
          });
 
-         buttonRegister.setOnClickListener(new View.OnClickListener(){
-             @Override
-             public void onClick(View view) {
-                 Intent move = new Intent(RegisterBuyerActivity.this, LoginBuyerActivity.class);
-                 startActivity(move);
-             }
-         });
     }
 
 
@@ -68,25 +62,25 @@ public class RegisterBuyerActivity extends AppCompatActivity {
                 if(response.isSuccessful()){
                     try{
                         JSONObject theJson = new JSONObject(response.body().string());
-                        if(theJson.getString("Message").equals("Success")){
+                        if(theJson.getString("message").equals("User Created")){
                             //masih ga tau pas dan bener apa ga
+                            Toast.makeText(mContext, "Register Successfull", Toast.LENGTH_SHORT).show();
                             Intent move = new Intent(RegisterBuyerActivity.this, LoginBuyerActivity.class);
                             startActivity(move);
-                            Toast.makeText(mContext, "Register Successfull", Toast.LENGTH_SHORT).show();
                         }else{
-                            Toast.makeText(mContext, "Register Failed", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(mContext, "Register Failed3", Toast.LENGTH_SHORT).show();
                         }
                     }catch(JSONException | IOException e){
                         e.printStackTrace();
                     }
                 }else{
-                    Toast.makeText(mContext, "Register Failed", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(mContext, "Register Failed2", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
-                Toast.makeText(mContext, "Register Failed", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "Register Failed3", Toast.LENGTH_SHORT).show();
             }
         });
 

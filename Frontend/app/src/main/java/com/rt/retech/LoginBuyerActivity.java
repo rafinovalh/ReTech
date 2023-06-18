@@ -6,6 +6,7 @@ import java.io.IOException;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.content.Intent;
@@ -62,14 +63,14 @@ public class LoginBuyerActivity extends AppCompatActivity {
 
     }
 
-    protected void requestLoginBuyer(){
+    private void requestLoginBuyer(){
         mApiService.loginRequestBuyer(username.getText().toString(), password.getText().toString()).enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 if(response.isSuccessful()){
                     try{
                         JSONObject theJson = new JSONObject(response.body().string());
-                        if(theJson.getString("Message").equals("Success")){
+                        if(theJson.getString("message").equals("Login successful")){
                             //masih ga tau pas dan bener apa ga
                             Intent move = new Intent(LoginBuyerActivity.this, MainBuyerActivity.class);
                             startActivity(move);
@@ -87,6 +88,7 @@ public class LoginBuyerActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
+                Log.e("debug", "onFailure: ERROR > " + t.toString());
                 Toast.makeText(mContext, "Login Failed", Toast.LENGTH_SHORT).show();
             }
         });
